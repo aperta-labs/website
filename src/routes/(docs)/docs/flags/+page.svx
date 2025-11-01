@@ -1,0 +1,17 @@
+# Flags
+
+`@aperta/flags` is a simple feature flagging library. It is designed to be:
+
+- Fast
+- Simple
+- Framework agnostic
+
+Installation is easy with `npm`:
+
+```bash
+npm i @aperta/flags
+```
+
+## something
+
+### something

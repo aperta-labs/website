@@ -37,7 +37,7 @@
 			<p>A delightful way to page</p>
 		</div>
 	</a>
-	<a href="/docs/flgas">
+	<a href="/docs/flags">
 		<div
 			class="h-[115px] space-y-2 rounded-lg border border-gray-900 bg-gray-950/50 p-5 shadow-sm shadow-black/50"
 		>

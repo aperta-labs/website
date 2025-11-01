@@ -17,9 +17,7 @@
 </script>
 
 <article class="h-[calc(100vh-88.67px)] w-full space-y-7 overflow-y-auto px-5 pt-5">
-	<div
-		class="prose-ul:list-desc prose-code:geist-mono prose w-full overflow-y-auto prose-headings:mt-0 prose-headings:mb-3 prose-headings:font-normal prose-headings:text-white prose-h1:text-2xl prose-h1:text-white prose-h2:text-xl prose-h3:text-lg prose-p:mt-0 prose-p:text-gray-400 prose-code:w-full prose-code:text-white prose-ul:mt-0 prose-ul:ml-3 prose-li:mt-0 prose-li:mb-2 prose-li:text-gray-400"
-	>
+	<div class="prose">
 		{@render children()}
 	</div>
 	<div class="border-t border-gray-900">
