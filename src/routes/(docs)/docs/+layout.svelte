@@ -13,6 +13,6 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 <Header type={HeaderType.DOCS} />
-<main class="mx-auto max-w-7xl px-5">
+<main class="mx-auto max-w-7xl">
 	{@render children?.()}
 </main>

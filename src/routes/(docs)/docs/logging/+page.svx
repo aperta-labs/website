@@ -6,4 +6,12 @@
 - Simple
 - Framework agnostic
 
-You'll
+Installation is easy with `npm`:
+
+```bash
+npm i @aperta/logging
+```
+
+## something
+
+### something
