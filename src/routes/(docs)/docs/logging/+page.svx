@@ -1,0 +1,9 @@
+# Logging
+
+`@aperta/logging` is a simple logging library. It is designed to be:
+
+- Fast
+- Simple
+- Framework agnostic
+
+You'll

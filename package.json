@@ -34,11 +34,16 @@
 		"tailwindcss": "^4.1.13",
 		"typescript": "^5.9.2",
 		"typescript-eslint": "^8.44.1",
-		"vite": "^7.1.7"
+		"vite": "^7.1.7",
+		"vite-plugin-lucide-preprocess": "^1.4.5"
 	},
 	"dependencies": {
 		"@fontsource-variable/geist-mono": "^5.2.7",
 		"@fontsource/geist-sans": "^5.2.5",
-		"@fontsource/silkscreen": "^5.2.8"
+		"@fontsource/silkscreen": "^5.2.8",
+		"@lucide/svelte": "^0.552.0",
+		"classnames": "^2.5.1",
+		"mdsvex": "^0.12.6",
+		"zod": "^4.1.12"
 	}
 }

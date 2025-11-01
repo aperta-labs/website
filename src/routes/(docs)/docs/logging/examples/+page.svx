@@ -1,0 +1,18 @@
+---
+title: Examples
+---
+
+<script>
+    import { h1, h2 } from "$lib/components/mdsvex/Headings.svelte";
+    export const metadata = {
+        title: "Getting Started"
+    }
+</script>
+
+{@render h1("test")}
+
+Hi there
+
+{@render h2("test")}
+
+Hi there
