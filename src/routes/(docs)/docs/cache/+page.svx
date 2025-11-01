@@ -1,0 +1,17 @@
+# Cache
+
+`@aperta/cache` is a simple logging library. It is designed to be:
+
+- Fast
+- Simple
+- Framework agnostic
+
+Installation is easy with `npm`:
+
+```bash
+npm i @aperta/cache
+```
+
+## something
+
+### something

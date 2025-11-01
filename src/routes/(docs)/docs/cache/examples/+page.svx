@@ -1,0 +1,11 @@
+---
+title: Examples
+---
+
+```js
+console.log('test');
+```
+
+Hi there
+
+Hi there
