@@ -1,1 +1,3 @@
 # Licensing
+
+Our libraries are licensed under the [MIT Open Source License](https://opensource.org/license/mit). You can view our license on our Github Monorepo [here](https://github.com/aperta-labs/aperta/blob/main/LICENSE).

@@ -1,1 +1,11 @@
 # Contributing
+
+A core philosphy of Aperta projects is that they reach code complete reach upon release. While this means minimal contributions are necessary, this is yeilds a few benefits.
+
+- Low/zero maintence.
+- Stability for users.
+- Users learn once.
+
+To uphold this philosphy, zero issues can be filed. Only discussions can be created, which can be converted into issues. If an issue is to be created, it must be lean or address a bug fix.
+
+Aperta projects designed to be simple and extended with ease. We encourage forks of Aperta projects or using Aperta projects as peer dependencies to create the better abstraction you envision.
