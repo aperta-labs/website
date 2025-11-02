@@ -17,7 +17,7 @@
 </script>
 
 <aside
-	class="hidden h-[calc(100vh-88.67px)] w-[300px] flex-col space-y-3 overflow-y-auto border-r border-gray-900 py-5 text-gray-400 md:flex"
+	class="hidden h-[calc(100vh-88.67px)] w-[300px] flex-col space-y-3 overflow-y-auto border-r border-gray-900 py-5 pl-5 text-gray-400 md:flex"
 >
 	{#each tableOfContents as metadata}
 		{@const pathname = project

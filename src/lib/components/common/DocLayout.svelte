@@ -17,7 +17,7 @@
 	}
 </script>
 
-<article class="h-[calc(100vh-88.67px)] w-full space-y-7 overflow-y-auto pt-5 pl-5">
+<article class="h-[calc(100vh-88.67px)] w-full space-y-7 overflow-y-auto px-5 pt-5">
 	<div class="prose">
 		{@render children()}
 	</div>
