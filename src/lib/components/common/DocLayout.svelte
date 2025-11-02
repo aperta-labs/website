@@ -21,14 +21,20 @@
 	<div class="prose">
 		{@render children()}
 	</div>
-	{#if editLink}
-		<div class="border-t border-gray-900">
+	<div class="flex items-center justify-between border-t border-gray-900 py-5 text-sm">
+		{#if editLink}
 			<a href={githubLocation()}>
-				<div class="flex items-center space-x-2 py-5 text-white">
-					<Pencil size={15} />
+				<div class="flex items-center space-x-2 text-white">
+					<Pencil size={12} />
 					<span>Edit this page</span>
 				</div>
 			</a>
+		{:else}
+			<div></div>
+		{/if}
+		<div class="flex items-center text-white">
+			<span class="silkscreen">Aperta</span>&nbsp;
+			<span>© {new Date().getFullYear()}</span>
 		</div>
-	{/if}
+	</div>
 </article>

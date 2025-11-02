@@ -26,7 +26,10 @@
 
 <div class="flex w-full">
 	<TableOfContents {tableOfContents} project="flags" />
-	<DocLayout>
+	<DocLayout
+		editLink={(pathname) =>
+			`https://github.com/aperta-labs/website/tree/main/src/routes/(docs)${pathname}/+page.svx`}
+	>
 		{@render children()}
 	</DocLayout>
 </div>
