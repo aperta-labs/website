@@ -1,11 +1,104 @@
 ---
-title: Examples
+title: Speed
 ---
 
-```js
-console.log('test');
+<script>
+    import { h1, h2, h3 } from "$lib/components/mdsvex/Headings.svelte";
+</script>
+
+{@render h1("Examples")}
+
+Here you'll find various examples of using `@aperta/logging`.
+
+{@render h2("Log Modes")}
+{@render h3("Info Mode")}
+
+```ts
+const loggers = {
+	testing: logger('testing')
+};
+
+loggers.testing.info('Hello World!');
 ```
 
-Hi there
+{@render h3("Error Mode")}
 
-Hi there
+```ts
+const loggers = {
+	testing: logger('testing')
+};
+
+loggers.testing.error('Hello World!');
+```
+
+{@render h3("Warn Mode")}
+
+```ts
+const loggers = {
+	testing: logger('testing')
+};
+
+loggers.testing.warn('Hello World!');
+```
+
+{@render h3("Trace Mode")}
+
+```ts
+const loggers = {
+	testing: logger('testing')
+};
+
+loggers.testing.trace('Hello World!');
+```
+
+{@render h3("Debug Mode")}
+
+```ts
+const loggers = {
+	testing: logger('testing')
+};
+
+loggers.testing.debug('Hello World!');
+```
+
+{@render h2("Formatted Output")}
+
+```ts
+import { logger, type Log } from '@aperta/logging';
+
+function formatter(log: Log) {
+	return `${log.namespace} - ${log.message}`;
+}
+
+const loggers = {
+	testing: logger('testing', {
+		formatter
+	})
+};
+```
+
+{@render h2("Sink")}
+
+```ts
+import { logger, type Log } from '@aperta/logging';
+
+async function lokiSink(logs: Log[]) {
+	const body = {
+		message: log.message,
+		date: log.date
+	};
+
+	await fetch('http://localhost:8080/log-drain', {
+		method: 'POST',
+		headers: { 'Content-Type': 'application/json' },
+		body: JSON.stringify(body)
+	});
+}
+
+const loggers = {
+	testing: logger('testing', {
+		sink,
+		queue: 5
+	})
+};
+```

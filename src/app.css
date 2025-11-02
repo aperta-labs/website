@@ -18,35 +18,43 @@ body {
 }
 
 @utility prose {
+	@apply -mt-7;
 	p {
-		@apply mb-5;
+		@apply mt-3;
 	}
 	code {
 		@apply text-white;
+		font-family: 'Geist Mono Variable', monospace;
 	}
 	ul {
-		@apply mb-5 ml-7 list-disc space-y-1;
+		@apply mt-3 ml-7 list-disc space-y-1;
+	}
+	ol {
+		@apply mt-3 ml-7 list-decimal space-y-1;
+	}
+	a {
+		@apply text-blue-500 transition-all ease-in-out hover:text-blue-600;
 	}
 	h1,
 	h2,
 	h3 {
-		@apply mb-3 text-white;
+		@apply text-white;
 	}
 	h1 {
-		@apply text-2xl;
+		@apply mt-7 text-2xl;
 	}
 	h2 {
-		@apply text-xl;
+		@apply mt-5 text-xl;
 	}
 	h3 {
-		@apply text-lg;
+		@apply mt-4 text-lg;
 	}
 	pre {
-		@apply mb-5;
+		@apply mt-3;
 	}
 }
 
 .shiki {
-	@apply w-full! rounded-lg! border border-gray-900 bg-gray-950/50! p-5 shadow-sm shadow-black/50;
+	@apply w-full! rounded-lg! border border-gray-900 bg-gray-950/50! p-5 text-sm shadow-sm shadow-black/50;
 	font-family: 'Geist Mono Variable', monospace;
 }

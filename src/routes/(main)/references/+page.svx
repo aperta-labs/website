@@ -8,10 +8,12 @@
 
 Installation is easy with `npm`:
 
-```bash
+```cmd
 npm i @aperta/pager
 ```
 
 ## something
 
 ### something
+
+.

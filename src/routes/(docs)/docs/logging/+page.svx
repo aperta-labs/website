@@ -6,12 +6,8 @@
 - Simple
 - Framework agnostic
 
-Installation is easy with `npm`:
+Installation is easy via `npm`.
 
-```bash
+```cmd
 npm i @aperta/logging
 ```
-
-## something
-
-### something

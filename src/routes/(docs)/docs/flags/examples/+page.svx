@@ -2,7 +2,7 @@
 title: Examples
 ---
 
-```js
+```ts
 console.log('test');
 ```
 

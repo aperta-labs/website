@@ -13,15 +13,11 @@
             href: "/docs/flags"
         },
         {
-            title: "@aperta/cache",
-            description: "A delightful way to cache",
-            href: "/docs/cache"
+            title: "@aperta/store",
+            description: "A delightful way to cache or rate limit",
+            href: "/docs/store"
         },
-        {
-            title: "@aperta/pager",
-            description: "A delightful way to page",
-            href: "/docs/pager"
-        }
+
     ];
 </script>
 
@@ -31,7 +27,7 @@ Aperta is a set of open-source libraries designed to be simple, efficient, and d
 
 We have a variety of libraries we've developed. Take a peak at them:
 
-<div class="grid md:grid-cols-2 grid-cols-1 gap-3">
+<div class="grid md:grid-cols-2 grid-cols-1 gap-3 mt-5">
     {#each libraries as library}
         <Library {library} />
     {/each}

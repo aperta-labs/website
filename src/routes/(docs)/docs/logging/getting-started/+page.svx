@@ -1,18 +1,98 @@
----
-title: Getting Started
----
-
 <script>
     import { h1, h2 } from "$lib/components/mdsvex/Headings.svelte";
-    export const metadata = {
-        title: "Getting Started"
-    }
 </script>
 
-{@render h1("test")}
+{@render h1("Getting Started")}
 
-Hi there
+{@render h2("Creating your first logger")}
 
-{@render h2("test")}
+`@aperta/logging` operates under the idea of namespaces. Creating a logger requires a namespace. This sures your logs are automatically organized--even after declaration.
 
-Hi there
+The following code is shows how you create a logger. In this example, the namespace is "testing".
+
+```ts
+import { logger } from '@aperta/logging';
+
+const loggers = {
+	testing: logger('testing')
+};
+```
+
+{@render h2("Using your logger")}
+
+Continuing with the example from above, we can use our logger namespaced with "testing" as follows.
+
+```ts
+loggers.testing.info('Hello World!');
+```
+
+This is log the following to `stdout`
+
+```cmd
+
+```
+
+Your logger is not just limited to `info`. Visit our [examples](/docs/logging/examples#log-modes) to view other supported modes.
+
+{@render h2("Formatted Output")}
+
+We can format what gets outputted to `stdout` and `stderr`. This is done by passing a custom formatter to your logger.
+
+```ts
+import { logger, type Log } from '@aperta/logging';
+
+function formatter(log: Log) {
+	return `${log.namespace} - ${log.message}`;
+}
+
+const loggers = {
+	testing: logger('testing', {
+		formatter
+	})
+};
+```
+
+Now following will result.
+
+```
+testing - Hello World!
+```
+
+{@render h2("Sinks")}
+
+Sinks are way to transport logs to external location. This is important to ensure you can observe your logs other than `stdout` or `stderr`.
+
+Here is an example of a sink to [Loki](https://grafana.com/oss/loki/).
+
+```ts
+import { logger, type Log } from '@aperta/logging';
+
+async function lokiSink(logs[]: Log) {
+    const body = {
+        streams: [
+            {
+                stream: { app: 'my-app', level: log.level },
+                values: [
+                    // convert the date to nanoseconds
+                    [ `${log.date}000000`, log.message ],
+                ],
+            },
+        ],
+    };
+
+    await fetch('http://localhost:3100/loki/api/v1/push', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+    });
+}
+
+const loggers = {
+	testing: logger('testing', {
+        sink: lokiSink,
+        queue: 6
+    })
+};
+```
+
+The `queue` argument specify how many logs are queued before transporting them to your sink.
