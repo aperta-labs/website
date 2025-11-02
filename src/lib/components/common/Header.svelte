@@ -11,9 +11,9 @@
 	let { type }: Props = $props();
 </script>
 
-<div class="flex justify-center border-b border-gray-900 px-5 py-7">
+<div class="flex justify-center border-b border-gray-900 py-7">
 	<nav
-		class={classNames('flex w-full justify-between', {
+		class={classNames('flex w-full justify-between px-5 ', {
 			'max-w-4xl': type == HeaderType.NORMAL,
 			'max-w-7xl': type == HeaderType.DOCS
 		})}
