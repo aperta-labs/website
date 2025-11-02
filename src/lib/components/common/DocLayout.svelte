@@ -5,13 +5,14 @@
 
 	interface Props {
 		children: Snippet;
+		editLink?: (pathname: string) => string;
 	}
 
-	const { children }: Props = $props();
+	const { children, editLink }: Props = $props();
 
 	function githubLocation() {
 		const pathname = page.url.pathname;
-		const githubUrl = `https://github.com/aperta-labs/website/tree/main/src/routes/(docs)${pathname}/+page.svx`;
+		const githubUrl = editLink?.(pathname);
 		return githubUrl;
 	}
 </script>
@@ -20,12 +21,14 @@
 	<div class="prose">
 		{@render children()}
 	</div>
-	<div class="border-t border-gray-900">
-		<a href={githubLocation()}>
-			<div class="flex items-center space-x-2 py-5 text-white">
-				<Pencil size={15} />
-				<span>Edit this page</span>
-			</div>
-		</a>
-	</div>
+	{#if editLink}
+		<div class="border-t border-gray-900">
+			<a href={githubLocation()}>
+				<div class="flex items-center space-x-2 py-5 text-white">
+					<Pencil size={15} />
+					<span>Edit this page</span>
+				</div>
+			</a>
+		</div>
+	{/if}
 </article>

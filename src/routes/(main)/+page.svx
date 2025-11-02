@@ -1,0 +1,38 @@
+<script lang='ts'>
+    import Library from "$lib/components/common/Library.svelte";
+
+    const libraries = [
+        {
+            title: "@aperta/logging",
+            description: "A delightful way to log",
+            href: "/docs/logging"
+        },
+        {
+            title: "@aperta/flags",
+            description: "A delightful way to feature flag",
+            href: "/docs/flags"
+        },
+        {
+            title: "@aperta/cache",
+            description: "A delightful way to cache",
+            href: "/docs/cache"
+        },
+        {
+            title: "@aperta/pager",
+            description: "A delightful way to page",
+            href: "/docs/pager"
+        }
+    ];
+</script>
+
+# 👋 Hi there
+
+Aperta is a set of open-source libraries designed to be simple, efficient, and delightful to use in the typescript ecosystem.
+
+We have a variety of libraries we've developed. Take a peak at them:
+
+<div class="grid md:grid-cols-2 grid-cols-1 gap-3">
+    {#each libraries as library}
+        <Library {library} />
+    {/each}
+</div>

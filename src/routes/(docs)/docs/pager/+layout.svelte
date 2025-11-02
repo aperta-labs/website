@@ -1,7 +1,7 @@
 <script lang="ts">
 	import DocLayout from '$lib/components/common/DocLayout.svelte';
 	import TableOfContents from '$lib/components/common/TableOfContents.svelte';
-	import type { LayoutProps } from '../logging copy/$types';
+	import type { LayoutProps } from './$types';
 
 	const tableOfContents = [
 		{
@@ -26,7 +26,10 @@
 
 <div class="flex w-full">
 	<TableOfContents {tableOfContents} project="pager" />
-	<DocLayout>
+	<DocLayout
+		editLink={(pathname) =>
+			`https://github.com/aperta-labs/website/tree/main/src/routes/(docs)${pathname}/+page.svx`}
+	>
 		{@render children()}
 	</DocLayout>
 </div>

@@ -1,5 +1,5 @@
 <script>
-	import '../../../app.css';
+	import '../app.css';
 	import '@fontsource/silkscreen';
 	import '@fontsource/geist-sans';
 	import '@fontsource-variable/geist-mono';

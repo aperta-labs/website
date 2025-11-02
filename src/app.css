@@ -46,14 +46,7 @@ body {
 	}
 }
 
-@utility not-prose {
-	p {
-	}
-	h1 {
-	}
-}
-
 .shiki {
-	@apply w-full! rounded-lg! bg-gray-950/50! border border-gray-900 p-5 shadow-sm shadow-black/50;
+	@apply w-full! rounded-lg! border border-gray-900 bg-gray-950/50! p-5 shadow-sm shadow-black/50;
 	font-family: 'Geist Mono Variable', monospace;
 }
